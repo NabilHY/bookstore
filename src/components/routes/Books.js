@@ -1,9 +1,10 @@
-const Books = () => {
-    return (
-        <div>
-            Books component will have the list of books and an input field
-        </div>
-    )
-}
+import Book from './Book';
+
+const Books = () => (
+  <>
+    <h1>Book List</h1>
+    <Book />
+  </>
+);
 
 export default Books;
