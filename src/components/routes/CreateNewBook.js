@@ -1,11 +1,11 @@
-function Input() {
+function CreateNewBook() {
   return (
-    <div>
+    <form>
       <input type="text" placeholder="Enter book title" />
       <input type="text" placeholder="Enter book author" />
       <input type="submit" value="Add book" />
-    </div>
+    </form>
   );
 }
 
-export default Input;
+export default CreateNewBook;
