@@ -1,11 +1,26 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/books';
+
 function Book() {
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  const handleClick = (book) => {
+    dispatch(removeBook(book));
+  };
   return (
-    <>
-      <div>
-        <h2>Awaken the giant within</h2>
-        <p>Anthony Robbins</p>
-      </div>
-    </>
+    <ul>
+      {books.map((book) => (
+        <li key={book.id}>
+          <p>{book.title}</p>
+          <p>{book.author}</p>
+          <button type="button">Comment</button>
+          <button type="button">Edit</button>
+          <button type="button" onClick={() => handleClick(book)}>Remove</button>
+        </li>
+
+      ))}
+
+    </ul>
   );
 }
 
