@@ -1,7 +1,25 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'books/ADD_BOOK';
 const REMOVE_BOOK = 'books/REMOVE_BOOK';
 
-const initialeState = [];
+const initialeState = [
+  {
+    title: 'Awaken the giant within',
+    author: 'Anthony robbins',
+    id: uuidv4(),
+  },
+  {
+    title: 'The power of now',
+    author: 'Echart Tolle',
+    id: uuidv4(),
+  },
+  {
+    title: 'Fault in our stars',
+    author: 'John Green',
+    id: uuidv4(),
+  },
+];
 
 export function addBook(newBook) {
   return {
