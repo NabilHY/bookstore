@@ -4,8 +4,8 @@ import { removeBook } from '../../redux/books/books';
 function Book() {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
-  const handleClick = (book) => {
-    dispatch(removeBook(book));
+  const handleClick = (id) => {
+    dispatch(removeBook(id));
   };
   return (
     <ul>
@@ -15,11 +15,9 @@ function Book() {
           <p>{book.author}</p>
           <button type="button">Comment</button>
           <button type="button">Edit</button>
-          <button type="button" onClick={() => handleClick(book)}>Remove</button>
+          <button type="button" onClick={() => handleClick(book.id)}>Remove</button>
         </li>
-
       ))}
-
     </ul>
   );
 }

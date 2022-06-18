@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Books from './components/routes/Books';
 import Categories from './components/routes/Categories';
 import Navbar from './components/Navbar';
+import { displayBook } from './redux/books/books';
 import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => { dispatch(displayBook()); }, [dispatch]);
   return (
     <BrowserRouter>
       <Navbar />
