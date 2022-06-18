@@ -31,6 +31,14 @@ export const addBook = createAsyncThunk('books/addBook', async ({ title, author,
   return books;
 });
 
+export const removeBook = createAsyncThunk('books/removeBook', async (id, thunkAPI) => {
+  fetch(`${url}/${id}`, {
+    method: 'DELETE',
+  }).then(() => thunkAPI.dispatch(displayBook()));
+  const { books } = thunkAPI.getState().books;
+  return books;
+});
+
 const options = {
   name: 'books',
   initialState: [],
@@ -39,6 +47,7 @@ const options = {
   extraReducers: {
     [displayBook.fulfilled]: (state, action) => action.payload[0],
     [addBook.fulfilled]: (state, action) => action.payload,
+    [removeBook.fulfilled]: (state, action) => action.payload,
   },
 };
 
