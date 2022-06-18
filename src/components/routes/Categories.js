@@ -9,7 +9,7 @@ const Categories = () => {
   };
   return (
     <div>
-      <button onClick={clickHandler} type="button">Check status</button>
+      <button className="book-submit" onClick={clickHandler} type="button">Check status</button>
       <h1>
         {status}
       </h1>

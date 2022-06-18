@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaUserAlt } from 'react-icons/fa';
 
 const Navbar = () => (
   <nav className="navbar">
     <span className="Bookstore-CMS">
       Bookstore CMS
     </span>
-    <Link class="navlink" to="/">Books</Link>
-    <Link class="navlink" to="/categories">Categories</Link>
-    <div className="Oval">
-      <div className="Mask" />
+    <Link className="navlink" to="/">Books</Link>
+    <Link className="navlink" to="/categories">Categories</Link>
+    <div className="cont">
+      <FaUserAlt className="user" />
     </div>
   </nav>
 );

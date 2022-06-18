@@ -24,7 +24,7 @@ function Book() {
             </div>
           </div>
           <div className="compl-prog">
-            <div className="Oval-2" />
+            <div className="circle" />
             <div className="progress">
               <p className="perc">64%</p>
               <p className="compl">Completed</p>

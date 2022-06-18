@@ -52,15 +52,15 @@ nav a {
   color: #121212;
 }
 
-.Oval {
+.cont {
   padding: 0.875rem;
   border: solid 1px #e8e8e8;
 }
 
-.Mask {
+.user {
   width: 1.063rem;
   height: 1.063rem;
-  background-color: #0290ff;
+  color: #0290ff;
 }
 
 .book {
@@ -125,15 +125,18 @@ nav a {
   font-weight: 300;
   color: #4386bf;
   margin-right: 3%;
+  cursor: pointer;
 }
 
-.Oval-2 {
+.circle {
   width: 4.25rem;
   height: 4.25rem;
   border-style: solid;
   border-width: 5px;
-  border-image-source: linear-gradient(to bottom, var(--medium-blue), #379cf6);
+  border-color: #dcdcdc blue blue #dcdcdc;
+  border-image: linear-gradient(to bottom, var(--medium-blue), #379cf6);
   border-image-slice: 1;
+  border-radius: 35px;
 }
 
 .perc {
@@ -141,7 +144,6 @@ nav a {
   height: 2.438rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  color: #121212;
 }
 
 .compl {
@@ -252,4 +254,5 @@ nav a {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+  cursor: pointer;
 }
