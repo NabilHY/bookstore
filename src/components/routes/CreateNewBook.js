@@ -6,7 +6,7 @@ import { addBook } from '../../redux/books/books';
 function CreateNewBook() {
   const dispatch = useDispatch();
   const [book, setBook] = useState({ title: '', author: '' });
-  const { title, author } = book;
+  const { title, author, category } = book;
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -14,11 +14,13 @@ function CreateNewBook() {
       id: uuidv4(),
       title,
       author,
+      category,
     };
     dispatch(addBook(newBook));
     setBook({
       title: '',
       author: '',
+      category: '',
     });
   };
 
@@ -33,6 +35,7 @@ function CreateNewBook() {
     <form onSubmit={submitHandler}>
       <input onChange={handleChange} type="text" placeholder="Enter book title" name="title" value={title} />
       <input onChange={handleChange} type="text" placeholder="Enter book author" name="author" value={author} />
+      <input onChange={handleChange} type="text" placeholder="Enter book category" name="category" value={category} />
       <input type="submit" value="Add book" />
     </form>
   );
