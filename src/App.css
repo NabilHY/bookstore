@@ -15,3 +15,48 @@ nav a {
   text-decoration: none;
   margin: 2px;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #e8e8e8;
+  align-items: center;
+  background-color: #fff;
+  margin: 1%;
+}
+
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.navlink {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.Oval {
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+}
+
+.Mask {
+  width: 1.063rem;
+  height: 1.063rem;
+  background-color: #0290ff;
+}
