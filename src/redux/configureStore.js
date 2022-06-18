@@ -8,3 +8,5 @@ const store = configureStore({
     categories: categoriesReducer,
   },
 });
+
+export default store;
