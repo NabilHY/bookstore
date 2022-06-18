@@ -32,12 +32,15 @@ function CreateNewBook() {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <input onChange={handleChange} type="text" placeholder="Enter book title" name="title" value={title} />
-      <input onChange={handleChange} type="text" placeholder="Enter book author" name="author" value={author} />
-      <input onChange={handleChange} type="text" placeholder="Enter book category" name="category" value={category} />
-      <input type="submit" value="Add book" />
-    </form>
+    <div className="prnt">
+      <h3 className="heading">Add A NEW BOOK</h3>
+      <form className="book-form" onSubmit={submitHandler}>
+        <input className="book-input" onChange={handleChange} type="text" placeholder="Enter book title" name="title" value={title} />
+        <input className="book-input" onChange={handleChange} type="text" placeholder="Enter book author" name="author" value={author} />
+        <input className="book-input" onChange={handleChange} type="text" placeholder="Enter book category" name="category" value={category} />
+        <input className="book-submit" type="submit" value="Add book" />
+      </form>
+    </div>
   );
 }
 

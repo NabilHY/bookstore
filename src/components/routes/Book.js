@@ -10,12 +10,31 @@ function Book() {
   return (
     <ul>
       {books.map((book) => (
-        <li key={book.id}>
-          <p>{book.title}</p>
-          <p>{book.author}</p>
-          <button type="button">Comment</button>
-          <button type="button">Edit</button>
-          <button type="button" onClick={() => handleClick(book.id)}>Remove</button>
+        <li className="book" key={book.id}>
+          <div className="book-container">
+            <div>
+              <p className="category">{book.category}</p>
+              <p className="title">{book.title}</p>
+              <p className="author">{book.author}</p>
+            </div>
+            <div className="btn-container">
+              <button className="btn" type="button">Comment</button>
+              <button className="btn" type="button">Edit</button>
+              <button className="btn" type="button" onClick={() => handleClick(book.id)}>Remove</button>
+            </div>
+          </div>
+          <div className="compl-prog">
+            <div className="circle" />
+            <div className="progress">
+              <p className="perc">64%</p>
+              <p className="compl">Completed</p>
+            </div>
+          </div>
+          <div>
+            <p className="current">CURRENT CHAPTER</p>
+            <p className="chapter">Chapter 17</p>
+            <button className="button" type="button">UPDATE PROGRESS</button>
+          </div>
         </li>
       ))}
     </ul>
