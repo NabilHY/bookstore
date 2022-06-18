@@ -33,7 +33,7 @@ function Book() {
           <div>
             <p className="current">CURRENT CHAPTER</p>
             <p className="chapter">Chapter 17</p>
-            <button type="button">UPDATE PROGRESS</button>
+            <button className="button" type="button">UPDATE PROGRESS</button>
           </div>
         </li>
       ))}
